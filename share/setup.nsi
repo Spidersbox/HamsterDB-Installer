@@ -11,10 +11,10 @@ SetCompressor /SOLID lzma
 
 # MUI Symbol Definitions
 !define MUI_ICON "./pixmaps/favicon.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "C:\msys64\home\Spider\HamsterDB-Installer\share\pixmaps\nsis-wizard.bmp"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "C:\msys64\home\Spider\HamstersDB-Installer\share\pixmaps\nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "C:\msys64\home\Spider\HamsterDB-Installer\share\pixmaps\nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "C:\msys64\home\Spider\HamstersDB-Installer\share\pixmaps\nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,7 +22,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER HamstersDB
 !define MUI_FINISHPAGE_RUN $INSTDIR\HamstersDB-Updater.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "C:\msys64\home\Spider\HamsterDB-Installer\share\pixmaps\nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "C:\msys64\home\Spider\HamstersDB-Installer\share\pixmaps\nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -58,7 +58,7 @@ VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
 VIAddVersionKey FileVersion "${VERSION}"
 VIAddVersionKey FileDescription ""
-VIAddVersionKey LegalCopyright "RebublicHamsters.net"
+VIAddVersionKey LegalCopyright "RebublicHams.net"
 InstallDirRegKey HKCU "${REGKEY}" Path
 ShowUninstDetails show
 
@@ -66,7 +66,7 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File C:\msys64\home\Spider\HamsterDB-Installer\release\HamstersDB-Updater.exe
+    File C:\msys64\home\Spider\HamstersDB-Installer\release\HamstersDB-Updater.exe
 #    File /oname=license.txt ../COPYING
 #//    File /oname=readme.txt ../doc/README_windows.txt
 #//    SetOutPath $INSTDIR\daemon
@@ -122,7 +122,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\HamsterDB-Updater.exe
+    Delete /REBOOTOK $INSTDIR\HamstersDB-Updater.exe
     RMDir /r /REBOOTOK $APPDATA\HamstersDB
 #    Delete /REBOOTOK $INSTDIR\license.txt
 #    Delete /REBOOTOK $INSTDIR\readme.txt
@@ -138,7 +138,7 @@ Section -un.post UNSEC0001
     Delete /REBOOTOK "$SMSTARTUP\HamstersDB.lnk"
     Delete /REBOOTOK "$DESKTOP\HamstersDB.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
-    Delete /REBOOTOK $INSTDIR\HamsterDB-Updater.exe
+    Delete /REBOOTOK $INSTDIR\HamstersDB-Updater.exe
     RMDir /r /REBOOTOK $INSTDIR
 #    Delete /REBOOTOK $INSTDIR\debug.log
 #    Delete /REBOOTOK $INSTDIR\db.log
